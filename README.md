@@ -46,6 +46,13 @@ Before connecting the 555 timer to the switching circuit(the transformer and tra
 
                                              f = 1/T (f ---> frequency, T ---> time period)
 
+Setup to test it:
 
+<img width="828" height="453" alt="image" src="https://github.com/user-attachments/assets/1e86504c-fc6a-44de-b887-cfac0f196fec" />
+
+
+(No flyback diodes used as the application is low powered and the power required to burn the transistor is much higher than what can be provided by the 1.5v cell)
+
+I observed that the brightness was noticable from 500Hz onwards. The testing video(1kHz):
 
 
