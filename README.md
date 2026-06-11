@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/1df65903-0d84-4ad5-8512-2837b4aa19c1
+
 # DC-to-AC-Boost-Converter
 DESCRIPTION:
 
@@ -55,4 +59,23 @@ Setup to test it:
 
 I observed that the brightness was noticable from 500Hz onwards. The testing video(1kHz):
 
+https://github.com/user-attachments/assets/e74684e5-2cc3-40ca-9b57-63ca90ea6b40
 
+(mild yellow glow in LED when square wave source(arduino) is powered)
+
+THe frequency of output to resistance and capacitance of a 555 timer astable circuit is given by:
+
+                          f = 1/3RC*ln2
+
+                          f = 1.44/3RC 
+To make the 555 timer to produce frequencies nearly 1kHz, we need to use appropriate resistors and capacitors. Since i only had 1K ohm resistors and 1 microfarad capacitors, my solutions to this problem were:
+
+1. reduce the resistance:
+   i tried reducing the resistance by using a graphite tip of a pencil to replace the resistors of astable 555 circuit, but it was more conductive than whats    needed and may burn the 555 chip
+
+2. reduce the capacitance:
+   since resistance is constant(1K ohm), for a frequency of 1KHz, as per calculations:
+             1/C = 3R*f*ln2
+             1/C = 3*1000*1000*ln2
+              C = 0.48 microfarads(approx)
+   this cappacitance can approximately be obtained by connecting two capacitors of 1 microfarad in series (0.5 microfarad equivalent capacitance)
