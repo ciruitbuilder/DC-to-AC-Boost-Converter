@@ -6,3 +6,9 @@ and hence creating a induced emf in secondary coil which is used to power the ou
 
 CIRCUIT DIAGRAM:
 
+<img width="581" height="415" alt="image" src="https://github.com/user-attachments/assets/09fa6208-bca4-4e86-98d2-332fea959932" />
+
+The 1.5v cell is connected to the input + and input -. To power the square wave generating 555 timer circuit, an arduino is used in this case. 
+
+FINISHED IMAGE:
+
