@@ -60,7 +60,7 @@ https://github.com/user-attachments/assets/e74684e5-2cc3-40ca-9b57-63ca90ea6b40
 
 (mild yellow glow in LED when square wave source(arduino) is powered)
 
-THe frequency of output to resistance and capacitance of a 555 timer astable circuit is given by:
+The relation of frequency to resistance and capacitance of a 555 timer astable circuit is given by:
 
                           f = 1/3RC*ln2
 
