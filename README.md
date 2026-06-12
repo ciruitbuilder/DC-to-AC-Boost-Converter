@@ -107,6 +107,7 @@ When connected the speaker to the secondary coil, i heard a faint beep sound fro
 
 
 OUTPUT:
+(increase volume for better observation)
 
 https://github.com/user-attachments/assets/f0a8b322-630b-4026-a191-c4775bfb37be
 
