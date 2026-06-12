@@ -43,7 +43,7 @@ This build was done in multipe attempts, i faced various issues which i tried so
 
 PROBLEM 1:
 
-Before connecting the 555 timer to the switching circuit(the transformer and transistor loop) i tested the switching circuit. I used an LED for output.The test approximated the frequency of square wave at the base of the transistor for which the LED glowed the brightest. I used an Arduino Nano to provide the square wave, because the frequency from a digital pin can be altered to our needs through the sketch ran by Arduino. The code is the blink sketch in examples section of arduino ide, the output pin is changed to D2 and the frequency can be changed using delay() [the time inside delay() is the time period of square wave generated] :
+Before connecting the 555 timer to the switching circuit(the transformer and transistor loop) i tested the switching circuit. I used an LED for output.The test approximated the frequency of square wave at the base of the transistor for which the LED glowed the brightest. I used an Arduino Nano to provide the square wave, because the frequency from a digital pin can be altered to our needs through the sketch ran by Arduino. The code is the blink sketch in examples section of arduino ide, the output pin is changed to D2 and the frequency can be changed using delay() [the twice time in milliseconds inside delay() is the time period of square wave generated] :
 
                                              f = 1/T (f ---> frequency, T ---> time period)
 
@@ -81,7 +81,7 @@ To make the 555 timer to produce frequencies nearly 1kHz, we need to use appropr
    
    this cappacitance can approximately be obtained by connecting two capacitors of 1 microfarad in series (0.5 microfarad equivalent capacitance)
 
-By this way i was able to generate grequencies neary 1KHz through the 555 timer. But still the LED didnt glow, when i tried testing wheather the 555 timer was producing the square wave using a speaker(salvaged from a old toy) , it gave a beeping sound confirming that the timer was producing the necessary square wave.  
+By this way i was able to generate frequencies neary 1KHz through the 555 timer. But still the LED didnt glow, when i tried testing wheather the 555 timer was producing the square wave using a speaker(salvaged from a old toy) , it gave a beeping sound confirming that the timer was producing the necessary square wave.  
 
 
 PROBLEM 2:
@@ -97,13 +97,13 @@ After flipping the transistor and checking if it switched, the speaker's beep co
 
 PROBLEM 3:
 
-Though the transistor switching was working now, when i connected the transformer again, placed the LED accross secondary coil and powered the arduino, The LED didnt glow. Then i had an idea to get output using the speaker instead of the LED. Unlike an LED, speaker doesnt have a specific set voltage below which it doesnt work.
+Though the transistor switching was working now, when i connected the transformer again, placed the LED accross secondary coil and powered the arduino, The LED didnt glow. Then i had an idea to read output using the speaker instead of the LED. Unlike an LED, speaker doesnt have a specific set voltage below which it doesnt work.
 
 When connected the speaker to the secondary coil, i heard a faint beep sound from the speaker , indicating the converter worked. but the sound obtained was lesser than what is heard when directly rubbing the wires from the 1.5v battery, showing that the converter didnt boost. This can be accounted to factors like:
 
-1. Tranformer inefficiency(loss of flux as it is air cored)
+1. Transformer inefficiency(loss of flux as it is air cored)
 
-2. square wave - the square wave has di/dt very high when it transistions from high to low and low to high, but this lasts only for a very short period of time. also i suspect the the discharge time of 555 astable mode(time for which the out put is low) is half the time the charging time(time for which the output is high), which gives a 66% duty cycle unlike the arduino tests which did make the LED glow with a 50% duty cycle with 1KHz frequency
+2. square wave - the square wave has di/dt very high when it transistions from high to low and low to high, but this lasts only for a very short period of time. also i suspect the the discharge time of 555 astable mode(time for which the output is low) is half the time the charging time(time for which the output is high), which gives a 66% duty cycle unlike the arduino tests which did make the LED glow with a 50% duty cycle with 1KHz frequency
 
 
 OUTPUT:
