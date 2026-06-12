@@ -93,3 +93,38 @@ Initially i thought the transistor was burnt, i tried confirming by isolating th
 It did work, but i noticed that the transistor was connected in a wrong way in the main circuit(flipped).
 
 After flipping the transistor and checking if it switched, the speaker's beep confirmed that the transistor switches, by beeping when connected its terminals to the transistor's collector and positive terminal.
+
+
+PROBLEM 3:
+
+Though the transistor switching was working now, when i connected the transformer again, placed the LED accross secondary coil and powered the arduino, The LED didnt glow. Then i had an idea to get output using the speaker instead of the LED. Unlike an LED, speaker doesnt have a specific set voltage below which it doesnt work.
+
+When connected the speaker to the secondary coil, i heard a faint beep sound from the speaker , indicating the converter worked. but the sound obtained was lesser than what is heard when directly rubbing the wires from the 1.5v battery, showing that the converter didnt boost. This can be accounted to factors like:
+
+1. Tranformer inefficiency(loss of flux as it is air cored)
+
+2. square wave - the square wave has di/dt very high when it transistions from high to low and low to high, but this lasts only for a very short period of time. also i suspect the the discharge time of 555 astable mode(time for which the out put is low) is half the time the charging time(time for which the output is high), which gives a 66% duty cycle unlike the arduino tests which did make the LED glow with a 50% duty cycle with 1KHz frequency
+
+
+OUTPUT:
+
+https://github.com/user-attachments/assets/f0a8b322-630b-4026-a191-c4775bfb37be
+
+There is an audible mild beeping sound made by speaker connected to secondary coil(output).
+
+
+This project is an effort to make a DC - AC boost converter, though it didnt step up propery, it proved the concept that the transformer can be driven with automatic wave generators which is a upgrade from the last project.
+
+
+ADDITIONAL OBSERVATION:
+
+I also built a core for the transformer to reduce the losses due to air core. 
+
+<img width="1600" height="1353" alt="image" src="https://github.com/user-attachments/assets/f680dcc4-3c44-433b-9ded-725884c584d8" />
+
+This is built by using bunch of 1cm pieces of metallic wire from a clothing hanging wire(used a magnet to verify its ferromagnetic) placed parallel to eachother an fixed with playdough. 
+
+In the OUTPUT video, one can observe that when the core was inserted(into the transformer in background), the intensity of beep sound increases, this also demonstrated the use of a ferromagnetic core in transformers to reduce flux loss. 
+
+
+THANK YOU
